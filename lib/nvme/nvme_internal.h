@@ -235,7 +235,7 @@ struct nvme_payload {
 	spdk_nvme_req_next_sge_cb next_sge_fn;
 
 	/**
-	 * Exended IO options passed by the user
+	 * Extended IO options passed by the user
 	 */
 	struct spdk_nvme_ns_cmd_ext_io_opts *opts;
 	/**
