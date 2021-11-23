@@ -119,7 +119,7 @@ _init_core(uint32_t lcore_id)
 
 	rc = rte_power_get_capabilities(lcore_id, &caps);
 	if (rc != 0) {
-		SPDK_ERRLOG("Failed retrievie capabilities of core%d\n", lcore_id);
+		SPDK_ERRLOG("Failed retrieve capabilities of core%d\n", lcore_id);
 		return rc;
 	}
 
