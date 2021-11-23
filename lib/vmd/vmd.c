@@ -694,7 +694,7 @@ vmd_create_new_bus(struct vmd_pci_bus *parent, struct vmd_pci_device *bridge, ui
 /*
  * Assigns a bus number from the list of available
  * bus numbers. If the device is downstream of a hot plug port,
- * assign the bus number from thiose assigned to the HP port. Otherwise,
+ * assign the bus number from those assigned to the HP port. Otherwise,
  * assign the next bus number from the vmd bus number list.
  */
 static uint8_t
