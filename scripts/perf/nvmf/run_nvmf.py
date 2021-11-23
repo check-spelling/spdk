@@ -517,7 +517,7 @@ class Target(Server):
                 rw_mixread = float(re.search(r"m_(\d+)", job_name).group(1)) / 100
 
             # If "_CPU" exists in name - ignore it
-            # Initiators for the same job could have diffrent num_cores parameter
+            # Initiators for the same job could have different num_cores parameter
             job_name = re.sub(r"_\d+CPU", "", job_name)
             job_result_files = [x for x in json_files if x.startswith(job_name)]
             self.log_print("Matching result files for current fio config:")
