@@ -108,8 +108,8 @@ struct spdk_nvme_intel_log_page_directory {
 SPDK_STATIC_ASSERT(sizeof(struct spdk_nvme_intel_log_page_directory) == 512, "Incorrect size");
 
 struct spdk_nvme_intel_rw_latency_page {
-	uint16_t		major_revison;
-	uint16_t		minor_revison;
+	uint16_t		major_revision;
+	uint16_t		minor_revision;
 	uint32_t		buckets_32us[32];
 	uint32_t		buckets_1ms[31];
 	uint32_t		buckets_32ms[31];
