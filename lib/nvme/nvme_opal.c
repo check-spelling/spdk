@@ -1207,7 +1207,7 @@ opal_activate(struct spdk_opal_dev *dev, struct opal_session *sess)
 		return err;
 	}
 
-	/* TODO: Single User Mode for activatation */
+	/* TODO: Single User Mode for activation */
 
 	ret = opal_cmd_finalize(sess, sess->hsn, sess->tsn, true);
 	if (ret) {
