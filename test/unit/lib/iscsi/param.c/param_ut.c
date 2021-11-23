@@ -58,7 +58,7 @@ DEFINE_STUB(iscsi_send_tgts, int,
 	    0);
 
 static void
-burst_length_param_negotation(int FirstBurstLength, int MaxBurstLength,
+burst_length_param_negotiation(int FirstBurstLength, int MaxBurstLength,
 			      int initialR2T)
 {
 	struct spdk_iscsi_sess sess;
@@ -149,12 +149,12 @@ burst_length_param_negotation(int FirstBurstLength, int MaxBurstLength,
 static void
 param_negotiation_test(void)
 {
-	burst_length_param_negotation(8192, 16384, 0);
-	burst_length_param_negotation(8192, 16384, 1);
-	burst_length_param_negotation(8192, 1024, 1);
-	burst_length_param_negotation(8192, 1024, 0);
-	burst_length_param_negotation(512, 1024, 1);
-	burst_length_param_negotation(512, 1024, 0);
+	burst_length_param_negotiation(8192, 16384, 0);
+	burst_length_param_negotiation(8192, 16384, 1);
+	burst_length_param_negotiation(8192, 1024, 1);
+	burst_length_param_negotiation(8192, 1024, 0);
+	burst_length_param_negotiation(512, 1024, 1);
+	burst_length_param_negotiation(512, 1024, 0);
 }
 
 static void
