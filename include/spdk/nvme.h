@@ -1659,7 +1659,7 @@ int spdk_nvme_ctrlr_free_io_qpair(struct spdk_nvme_qpair *qpair);
  *
  * The driver sets the CID.  EVERYTHING else is assumed set by the caller.
  * Needless to say, this is potentially extremely dangerous for both the host
- * (accidental/malicionus storage usage/corruption), and the device.
+ * (accidental/malicious storage usage/corruption), and the device.
  * Thus its intent is for very specific hardware testing and environment
  * reproduction.
  *
