@@ -1833,7 +1833,7 @@ nvmf_fc_handle_rsp(struct spdk_nvmf_fc_request *fc_req)
 	fc_conn->rsp_count++;
 
 	if (nvmf_fc_send_ersp_required(fc_req, fc_conn->rsp_count,
-				       fc_req->transfered_len)) {
+				       fc_req->transferred_len)) {
 		/* Fill ERSP Len */
 		to_be16(&ersp_len, (sizeof(struct spdk_nvmf_fc_ersp_iu) /
 				    sizeof(uint32_t)));
@@ -1844,7 +1844,7 @@ nvmf_fc_handle_rsp(struct spdk_nvmf_fc_request *fc_req)
 		fc_conn->rsn++;
 
 		/* Fill transfer length */
-		to_be32(&fc_req->ersp.transferred_data_len, fc_req->transfered_len);
+		to_be32(&fc_req->ersp.transferred_data_len, fc_req->transferred_len);
 
 		SPDK_DEBUGLOG(nvmf_fc, "Posting ERSP.\n");
 		rc = nvmf_fc_xmt_rsp(fc_req, (uint8_t *)&fc_req->ersp,

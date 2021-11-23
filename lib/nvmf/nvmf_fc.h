@@ -375,7 +375,7 @@ struct spdk_nvmf_fc_request {
 	struct spdk_nvmf_fc_conn *fc_conn;
 	struct spdk_nvmf_fc_hwqp *hwqp;
 	int state;
-	uint32_t transfered_len;
+	uint32_t transferred_len;
 	bool is_aborted;
 	uint32_t magic;
 	uint32_t s_id;
