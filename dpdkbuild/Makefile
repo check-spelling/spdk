@@ -136,7 +136,7 @@ endif
 # Some ninja versions come with a (broken?) jobserver which defaults to use
 # only 1 thread for the build. We workaround this by specifying -j to ninja
 # with the same value as top-makefile. This is OK as long as DPDK is not built
-# in parralel with anything else, which is the case for now.
+# in parallel with anything else, which is the case for now.
 ifeq ($(MAKE_PID),)
 MAKE_PID := $(shell echo $$PPID)
 endif
