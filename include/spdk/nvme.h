@@ -1404,7 +1404,7 @@ struct spdk_nvme_qpair;
  * Fatal Status field to 1, then reset is required to recover from such error.
  * Users may detect Controller Fatal Status when timeout happens.
  *
- * \param cb_arg Argument passed to callback funciton.
+ * \param cb_arg Argument passed to callback function.
  * \param ctrlr Opaque handle to NVMe controller.
  * \param qpair Opaque handle to a queue pair.
  * \param cid Command ID.
