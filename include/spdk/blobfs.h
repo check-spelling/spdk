@@ -237,7 +237,7 @@ int spdk_fs_create_file(struct spdk_filesystem *fs, struct spdk_fs_thread_ctx *c
  * \param ctx The thread context for this operation
  * \param name The file name used to look up the matched file in the blobstore filesystem.
  * \param flags This flags will be used to control the open mode.
- * \param file It will point to the open file if sccessful or NULL otherwise.
+ * \param file It will point to the open file if successful or NULL otherwise.
  *
  * \return 0 on success, negative errno on failure.
  */
