@@ -552,7 +552,7 @@ function reset_linux() {
 
 function status_linux() {
 	echo "Hugepages" >&2
-	printf "%-6s %10s %8s / %6s\n" "node" "hugesize" "free" "total" >&2
+	printf "%-6s %10s %8s / %6s\n" "node" "hugepagesize" "free" "total" >&2
 
 	numa_nodes=0
 	shopt -s nullglob
