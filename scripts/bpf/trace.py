@@ -475,7 +475,7 @@ class SPDKObject:
     """Describes a specific type of an SPDK objects (e.g. qpair, thread, etc.)"""
     @dataclass
     class Lifetime:
-        """Describes a lifetime and properites of a particular SPDK object."""
+        """Describes a lifetime and properties of a particular SPDK object."""
         begin: int
         end: int
         ptr: int
@@ -496,7 +496,7 @@ class SPDKObject:
 
     def annotate(self, entry: TraceEntry):
         """Annotates a tpoint entry and returns a dict indexed by argname with values representing
-        various object properites.  For instance, {"qpair": {"qid": 1, "subnqn": "nqn"}} could be
+        various object properties.  For instance, {"qpair": {"qid": 1, "subnqn": "nqn"}} could be
         returned to annotate an argument called "qpair" with two items: "qid" and "subnqn".
         """
         if entry.tpoint.id not in self.tpoints:
