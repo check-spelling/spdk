@@ -201,7 +201,7 @@ core_load() {
 	thread5=$(create_thread -n "thread5" -a 25)
 
 	# Three iterations are needed, as all threads look active on first iteration since they are on the main core.
-	# Second iteraion will have them spread out over cores and only third will collapse to the expected scenario.
+	# Second iteration will have them spread out over cores and only third will collapse to the expected scenario.
 	sleep $((3 * sched_period))
 	update_thread_cpus_map
 
