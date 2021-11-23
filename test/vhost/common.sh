@@ -1205,7 +1205,7 @@ function parse_fio_results() {
 			lat_divisor=1000
 		fi
 
-		# Horrific bash float point arithmetic oprations below.
+		# Horrific bash float point arithmetic operations below.
 		# Viewer discretion is advised.
 		iops=$(jq -r '[.read["iops"],.write["iops"]] | add' <<< $client_stats)
 		bw=$(jq -r '[.read["bw"],.write["bw"]] | add' <<< $client_stats)

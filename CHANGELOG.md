@@ -2383,7 +2383,7 @@ for the bdev type to be removed (i.e. delete_malloc_bdev).
 
 Added support for separate bandwidth rate limits for read and write to QoS in bdev layer.
 
-Bdev I/O statistics now track unmap opertations.
+Bdev I/O statistics now track unmap operations.
 
 ### logical volumes
 
