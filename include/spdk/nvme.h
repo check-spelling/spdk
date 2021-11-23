@@ -665,7 +665,7 @@ const char *spdk_nvme_transport_id_trtype_str(enum spdk_nvme_transport_type trty
  *
  * \param adrfam Address family to convert.
  *
- * \return static string constant describing adrfam, or NULL if adrmfam not found.
+ * \return static string constant describing adrfam, or NULL if adrfam not found.
  */
 const char *spdk_nvme_transport_id_adrfam_str(enum spdk_nvmf_adrfam adrfam);
 
