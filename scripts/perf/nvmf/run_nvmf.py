@@ -119,7 +119,7 @@ class Server:
                 self.log_print("%s resulted in error: %s" % (e.cmd, e.output))
 
     def adq_configure_tc(self):
-        self.log_print("Configuring ADQ Traffic classess and filters...")
+        self.log_print("Configuring ADQ Traffic classes and filters...")
 
         if self.mode == "kernel":
             self.log_print("WARNING: ADQ setup not yet supported for Kernel mode. Skipping configuration.")
