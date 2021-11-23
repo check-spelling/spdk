@@ -592,7 +592,7 @@ bool spdk_bdev_is_md_separate(const struct spdk_bdev *bdev);
  * Checks if bdev supports zoned namespace semantics.
  *
  * \param bdev Block device to query.
- * \return true if device supports zoned namespace sementics.
+ * \return true if device supports zoned namespace semantics.
  */
 bool spdk_bdev_is_zoned(const struct spdk_bdev *bdev);
 
