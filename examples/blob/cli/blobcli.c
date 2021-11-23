@@ -45,7 +45,7 @@
 
 /*
  * The following is not a public header file, but the CLI does expose
- * some internals of blobstore for dev/debug puposes so we
+ * some internals of blobstore for dev/debug purposes so we
  * include it here.
  */
 #include "../lib/blob/blobstore.h"
