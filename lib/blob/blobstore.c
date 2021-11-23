@@ -3591,7 +3591,7 @@ bs_delete_corrupted_blob(void *cb_arg, int bserrno)
 	}
 
 	/* Snapshot and clone have the same copy of cluster map and extent pages
-	 * at this point. Let's clear both for snpashot now,
+	 * at this point. Let's clear both for snapshot now,
 	 * so that it won't be cleared for clone later when we remove snapshot.
 	 * Also set thin provision to pass data corruption check */
 	for (i = 0; i < ctx->blob->active.num_clusters; i++) {
