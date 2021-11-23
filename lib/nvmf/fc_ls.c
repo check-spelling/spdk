@@ -883,7 +883,7 @@ nvmf_fc_ls_validate_host(struct spdk_nvmf_subsystem *subsystem, const char *host
 }
 
 /* **************************** */
-/* LS Reqeust Handler Functions */
+/* LS Request Handler Functions */
 
 static void
 nvmf_fc_ls_process_cass(uint32_t s_id,
