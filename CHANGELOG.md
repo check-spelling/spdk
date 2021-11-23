@@ -2355,7 +2355,7 @@ configure the shared buffer numbers of the transport used by RDMA or TCP transpo
 
 ### nvmf
 
-Add a new TCP/IP transport (located in lib/nvmf/tcp.c). With this tranport,
+Add a new TCP/IP transport (located in lib/nvmf/tcp.c). With this transport,
 the SPDK NVMe-oF target can have a new transport, and can serve the NVMe-oF
 protocol via TCP/IP from the host.
 

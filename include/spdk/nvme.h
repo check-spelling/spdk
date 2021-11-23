@@ -629,7 +629,7 @@ void spdk_nvme_trid_populate_transport(struct spdk_nvme_transport_id *trid,
 int spdk_nvme_host_id_parse(struct spdk_nvme_host_id *hostid, const char *str);
 
 /**
- * Parse the string representation of a transport ID tranport type into the trid struct.
+ * Parse the string representation of a transport ID transport type into the trid struct.
  *
  * \param trid The trid to write to
  * \param trstring Input string representation of transport type (e.g. "PCIe", "RDMA").
@@ -641,7 +641,7 @@ int spdk_nvme_transport_id_populate_trstring(struct spdk_nvme_transport_id *trid
 		const char *trstring);
 
 /**
- * Parse the string representation of a transport ID tranport type.
+ * Parse the string representation of a transport ID transport type.
  *
  * \param trtype Output transport type (allocated by caller).
  * \param str Input string representation of transport type (e.g. "PCIe", "RDMA").
@@ -670,7 +670,7 @@ const char *spdk_nvme_transport_id_trtype_str(enum spdk_nvme_transport_type trty
 const char *spdk_nvme_transport_id_adrfam_str(enum spdk_nvmf_adrfam adrfam);
 
 /**
- * Parse the string representation of a tranport ID address family.
+ * Parse the string representation of a transport ID address family.
  *
  * \param adrfam Output address family (allocated by caller).
  * \param str Input string representation of address family (e.g. "IPv4", "IPv6").
