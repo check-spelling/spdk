@@ -1193,7 +1193,7 @@ class SPDKTarget(Target):
             fh.write(str(proc.pid))
         self.nvmf_proc = proc
         self.log_print("SPDK NVMeOF Target PID=%s" % self.pid)
-        self.log_print("Waiting for spdk to initilize...")
+        self.log_print("Waiting for spdk to initialize...")
         while True:
             if os.path.exists("/var/tmp/spdk.sock"):
                 break
