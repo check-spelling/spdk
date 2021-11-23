@@ -277,7 +277,7 @@ struct spdk_nvme_ctrlr_opts {
 typedef void (*spdk_nvme_accel_completion_cb)(void *cb_arg, int status);
 
 /**
- * Function table for the NVMe acccelerator device.
+ * Function table for the NVMe accelerator device.
  *
  * This table provides a set of APIs to allow user to leverage
  * accelerator functions.
