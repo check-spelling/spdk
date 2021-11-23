@@ -429,7 +429,7 @@ test_nvmf_tcp_create(void)
 	opts.max_io_size = UT_MAX_IO_SIZE;
 	opts.io_unit_size = 16;
 	opts.max_aq_depth = UT_MAX_AQ_DEPTH;
-	/* expect failse */
+	/* expect fails */
 	transport = nvmf_tcp_create(&opts);
 	CU_ASSERT_PTR_NULL(transport);
 
