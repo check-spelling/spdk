@@ -1025,7 +1025,7 @@ vhost_scsi_session_add_tgt(struct spdk_vhost_dev *vdev,
 
 	rc = spdk_scsi_dev_allocate_io_channels(svsession->scsi_dev_state[scsi_tgt_num].dev);
 	if (rc != 0) {
-		SPDK_ERRLOG("%s: Couldn't allocate io channnel for SCSI target %u.\n",
+		SPDK_ERRLOG("%s: Couldn't allocate io channel for SCSI target %u.\n",
 			    vsession->name, scsi_tgt_num);
 
 		/* unset the SCSI target so that all I/O to it will be rejected */
