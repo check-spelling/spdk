@@ -160,7 +160,7 @@ class Server:
             self.log_print("%s" % tc_disk_out)
             self.log_print("%s" % tc_filter_out)
 
-            # Ethtool coalese settings must be applied after configuring traffic classes
+            # Ethtool coalesce settings must be applied after configuring traffic classes
             self.exec_cmd(["sudo", "ethtool", "--coalesce", nic_name, "adaptive-rx", "off", "rx-usecs", "0"])
             self.exec_cmd(["sudo", "ethtool", "--coalesce", nic_name, "adaptive-tx", "off", "tx-usecs", "500"])
 
