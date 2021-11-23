@@ -431,7 +431,7 @@ iscsi_send_tgts(struct spdk_iscsi_conn *conn, const char *iiqn,
 		len = snprintf(NULL, 0, "TargetName=%s", target->name);
 		assert(len < MAX_TMPBUF);
 
-		/* String contents are not copyied */
+		/* String contents are not copied */
 		if (previous_completed_size < len) {
 			/* Copy the string into the temporary buffer */
 			snprintf(tmp_buf, len + 1, "TargetName=%s", target->name);
