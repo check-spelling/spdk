@@ -3159,7 +3159,7 @@ nvmf_ctrlr_process_admin_cmd(struct spdk_nvmf_request *req)
 	if (g_nvmf_custom_admin_cmd_hdlrs[cmd->opc].hdlr && cmd->opc != SPDK_NVME_OPC_ABORT) {
 		rc = g_nvmf_custom_admin_cmd_hdlrs[cmd->opc].hdlr(req);
 		if (rc >= SPDK_NVMF_REQUEST_EXEC_STATUS_COMPLETE) {
-			/* The handler took care of this commmand */
+			/* The handler took care of this command */
 			return rc;
 		}
 	}
