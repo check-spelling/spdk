@@ -178,7 +178,7 @@ struct spdk_nvmf_ns {
 	struct spdk_bdev *bdev;
 	struct spdk_bdev_desc *desc;
 	struct spdk_nvmf_ns_opts opts;
-	/* reservation notificaton mask */
+	/* reservation notification mask */
 	uint32_t mask;
 	/* generation code */
 	uint32_t gen;
@@ -212,7 +212,7 @@ struct spdk_nvmf_ctrlr_feat {
 };
 
 /*
- * NVMf reservation notificaton log page.
+ * NVMf reservation notification log page.
  */
 struct spdk_nvmf_reservation_log {
 	struct spdk_nvme_reservation_notification_log	log;
