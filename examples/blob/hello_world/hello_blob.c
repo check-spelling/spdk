@@ -372,7 +372,7 @@ bs_init_complete(void *cb_arg, struct spdk_blob_store *bs,
 
 	SPDK_NOTICELOG("entry\n");
 	if (bserrno) {
-		unload_bs(hello_context, "Error init'ing the blobstore",
+		unload_bs(hello_context, "Error initing the blobstore",
 			  bserrno);
 		return;
 	}
