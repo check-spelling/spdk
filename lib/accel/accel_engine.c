@@ -45,8 +45,8 @@
 
 /* Accelerator Engine Framework: The following provides a top level
  * generic API for the accelerator functions defined here. Modules,
- * such as the one in /module/accel/ioat, supply the implemention
- * with the exception of the pure software implemention contained
+ * such as the one in /module/accel/ioat, supply the implementation
+ * with the exception of the pure software implementation contained
  * later in this file.
  */
 
