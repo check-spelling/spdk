@@ -2623,7 +2623,7 @@ for Python 2 up to the EOL which is year 2020.
 Invoking interpreter explicitly is forbidden for executable scripts. There
 is no need to use syntax like "python ./scripts/rpc.py". All executable
 scripts must contain proper shebang pointing to the right interpreter.
-Scripts without shebang musn't be executable.
+Scripts without shebang mustn't be executable.
 
 A Python script has been added to enable conversion of old INI config file
 to new JSON-RPC config file format. This script can be found at
