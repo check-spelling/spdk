@@ -487,7 +487,7 @@ process_blk_request(struct spdk_vhost_blk_task *task,
 
 	type = req->type;
 #ifdef VIRTIO_BLK_T_BARRIER
-	/* Don't care about barier for now (as QEMU's virtio-blk do). */
+	/* Don't care about barrier for now (as QEMU's virtio-blk do). */
 	type &= ~VIRTIO_BLK_T_BARRIER;
 #endif
 
