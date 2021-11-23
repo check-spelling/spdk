@@ -3098,7 +3098,7 @@ enum spdk_nvme_async_event_info_notice {
  * Asynchronous Event Information for NVM Command Set Specific Status
  */
 enum spdk_nvme_async_event_info_nvm_command_set {
-	/* Reservation Log Page Avaiable */
+	/* Reservation Log Page Available */
 	SPDK_NVME_ASYNC_EVENT_RESERVATION_LOG_AVAIL	= 0x0,
 	/* Sanitize Operation Completed */
 	SPDK_NVME_ASYNC_EVENT_SANITIZE_COMPLETED	= 0x1,
