@@ -354,7 +354,7 @@ test_reservation_preempt_non_all_regs(void)
 	SPDK_CU_ASSERT_FATAL(rc < 0);
 	SPDK_CU_ASSERT_FATAL(task.status == SPDK_SCSI_STATUS_CHECK_CONDITION);
 
-	/* Test Case: Host B preempts Host A, Host A is unregisted */
+	/* Test Case: Host B preempts Host A, Host A is unregistered */
 	task.status = 0;
 	gen = g_lun.pr_generation;
 	rc = scsi_pr_out_preempt(&task, SPDK_SCSI_PR_OUT_PREEMPT,
