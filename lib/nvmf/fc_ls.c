@@ -186,18 +186,18 @@ nvmf_fc_ls_format_rjt(void *buf, uint16_t buflen, uint8_t ls_cmd,
 }
 
 /* ************************************************** */
-/* Allocators/Deallocators (assocations, connections, */
+/* Allocators/Deallocators (associations, connections, */
 /* poller API data)                                   */
 
 static inline void
 nvmf_fc_ls_free_association(struct spdk_nvmf_fc_association *assoc)
 {
-	/* free assocation's send disconnect buffer */
+	/* free association's send disconnect buffer */
 	if (assoc->snd_disconn_bufs) {
 		nvmf_fc_free_srsr_bufs(assoc->snd_disconn_bufs);
 	}
 
-	/* free assocation's connections */
+	/* free association's connections */
 	free(assoc->conns_buf);
 
 	/* free the association */
@@ -366,7 +366,7 @@ nvmf_fc_ls_new_connection(struct spdk_nvmf_fc_association *assoc, uint16_t qid,
 	return fc_conn;
 }
 
-/* End - Allocators/Deallocators (assocations, connections, */
+/* End - Allocators/Deallocators (associations, connections, */
 /*       poller API data)                                   */
 /* ******************************************************** */
 

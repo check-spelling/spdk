@@ -250,7 +250,7 @@ struct spdk_nvmf_fc_conn {
 	/* for association's connection list */
 	TAILQ_ENTRY(spdk_nvmf_fc_conn) assoc_link;
 
-	/* for assocations's available connection list */
+	/* for associations's available connection list */
 	TAILQ_ENTRY(spdk_nvmf_fc_conn) assoc_avail_link;
 
 	/* for hwqp's rport connection list link  */
