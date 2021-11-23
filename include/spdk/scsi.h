@@ -454,7 +454,7 @@ const char *spdk_scsi_port_get_name(const struct spdk_scsi_port *port);
 /**
  * Construct a new SCSI task.
  *
- * \param task SCSI task to consturct.
+ * \param task SCSI task to construct.
  * \param cpl_fn Called when the task is completed.
  * \param free_fn Called when the task is freed
  */
