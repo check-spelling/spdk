@@ -486,7 +486,7 @@ class SPDKObject:
         for name in tpoints:
             tpoint = next((t for t in trace.tpoints.values() if t.name == name), None)
             if tpoint is None:
-                # Some tpoints might be undefined if configured without specific subystems
+                # Some tpoints might be undefined if configured without specific subsystems
                 continue
             self.tpoints[tpoint.id] = tpoint
 
