@@ -150,7 +150,7 @@ while getopts 'h-:' optchar; do
 				disk-config=*)
 					DISKCFG="${OPTARG#*=}"
 					if [[ ! -f "$DISKCFG" ]]; then
-						echo "Disk confiuration file $DISKCFG does not exist!"
+						echo "Disk configuration file $DISKCFG does not exist!"
 						exit 1
 					fi
 					;;

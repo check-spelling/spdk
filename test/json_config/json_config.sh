@@ -208,7 +208,7 @@ function create_bdev_subsystem_config() {
 		fi
 
 		# For LVOLs use split to check for proper order of initialization.
-		# If LVOLs cofniguration will be reordered (eg moved before splits or AIO/NVMe)
+		# If LVOLs configuration will be reordered (eg moved before splits or AIO/NVMe)
 		# it should fail loading JSON config from file.
 		tgt_rpc bdev_lvol_create_lvstore -c 1048576 ${lvol_store_base_bdev}p0 lvs_test
 		tgt_rpc bdev_lvol_create -l lvs_test lvol0 32
