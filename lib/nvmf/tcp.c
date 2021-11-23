@@ -1492,7 +1492,7 @@ nvmf_tcp_h2c_data_hdr_handle(struct spdk_nvmf_tcp_transport *ttransport,
 
 	if ((h2c_data->datao + h2c_data->datal) > tcp_req->req.length) {
 		SPDK_DEBUGLOG(nvmf_tcp,
-			      "tcp_req(%p), tqpair=%p,  (datao=%u + datal=%u) execeeds requested length=%u\n",
+			      "tcp_req(%p), tqpair=%p,  (datao=%u + datal=%u) exceeds requested length=%u\n",
 			      tcp_req, tqpair, h2c_data->datao, h2c_data->datal, tcp_req->req.length);
 		fes = SPDK_NVME_TCP_TERM_REQ_FES_DATA_TRANSFER_OUT_OF_RANGE;
 		goto err;
