@@ -982,7 +982,7 @@ _delete_vol_unload_cb(void *ctx)
 {
 	struct vbdev_compress *comp_bdev = ctx;
 
-	/* FIXME: Assert if these conditions are not satisified for now. */
+	/* FIXME: Assert if these conditions are not satisfied for now. */
 	assert(!comp_bdev->reduce_thread ||
 	       comp_bdev->reduce_thread == spdk_get_thread());
 
