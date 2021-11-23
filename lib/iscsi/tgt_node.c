@@ -451,7 +451,7 @@ iscsi_send_tgts(struct spdk_iscsi_conn *conn, const char *iiqn,
 	}
 	pthread_mutex_unlock(&g_iscsi.mutex);
 
-	/* Only set it when it is not succesufully completed */
+	/* Only set it when it is not successfully completed */
 	if (no_buf_space) {
 		conn->send_tgt_completed_size += total;
 	} else {

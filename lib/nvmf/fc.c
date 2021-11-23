@@ -1758,7 +1758,7 @@ nvmf_fc_hwqp_process_pending_reqs(struct spdk_nvmf_fc_hwqp *hwqp)
 	STAILQ_FOREACH_SAFE(req, &hwqp->fgroup->group.pending_buf_queue, buf_link, tmp) {
 		fc_req = SPDK_CONTAINEROF(req, struct spdk_nvmf_fc_request, req);
 		if (!nvmf_fc_request_execute(fc_req)) {
-			/* Succesfuly posted, Delete from pending. */
+			/* Successfully posted, Delete from pending. */
 			nvmf_fc_request_remove_from_pending(fc_req);
 		}
 
@@ -3440,7 +3440,7 @@ out:
 
 	} else {
 		SPDK_DEBUGLOG(nvmf_fc_adm_api,
-			      "NPort %d delete done succesfully, fc port:%d. "
+			      "NPort %d delete done successfully, fc port:%d. "
 			      "rport_cnt:%d\n",
 			      args->nport_handle, args->port_handle, rport_cnt);
 	}
