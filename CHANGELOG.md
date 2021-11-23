@@ -701,7 +701,7 @@ This allows the initiator to create persistent connection to discovery controlle
 be notified of any discovery log changes.
 
 An `opts_size` element was added in the `spdk_nvmf_transport_opts` structure
-to solve the ABI compatiblity issue between different SPDK version. And also add
+to solve the ABI compatibility issue between different SPDK version. And also add
 `opts_size` parameter in `spdk_nvmf_transport_opts_init` function.
 
 Added a new custom vfio-user transport implementation in NVMe-oF which can provide
@@ -1032,7 +1032,7 @@ A new API `spdk_ioat_get_max_descriptors` was added.
 ### nvme
 
 An `opts_size`element was added in the  `spdk_nvme_ctrlr_opts` structure
-to solve the ABI compatiblity issue between different SPDK version.
+to solve the ABI compatibility issue between different SPDK version.
 
 A new API `spdk_nvme_ctrlr_cmd_abort_ext` has been added to abort previously submitted
 commands whose callback argument match.
