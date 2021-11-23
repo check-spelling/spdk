@@ -184,7 +184,7 @@ struct spdk_vhost_dev {
 
 	const struct spdk_vhost_dev_backend *backend;
 
-	/* Saved orginal values used to setup coalescing to avoid integer
+	/* Saved original values used to setup coalescing to avoid integer
 	 * rounding issues during save/load config.
 	 */
 	uint32_t coalescing_delay_us;
