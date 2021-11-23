@@ -160,7 +160,7 @@ static void __attribute__((destructor)) deinit_execution_context(void)
 	free(exec_context_mutex);
 }
 
-/* get_execuction_context must assure that after the call finishes, the caller
+/* get_execution_context must assure that after the call finishes, the caller
  * will not get preempted from current execution context. For userspace env
  * we simulate this behavior by acquiring per execution context mutex. As a
  * result the caller might actually get preempted, but no other thread will
