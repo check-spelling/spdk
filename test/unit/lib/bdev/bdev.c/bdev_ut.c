@@ -1732,7 +1732,7 @@ bdev_io_boundary_split_test(void)
 	ut_expected_io_set_iov(expected_io, 0,
 			       (void *)(iov[BDEV_IO_NUM_CHILD_IOV - 2].iov_base + 0x1e4), 0x2e);
 
-	/* position 31 picked the the rest of the trasnfer to get us to 0x4200 */
+	/* position 31 picked the the rest of the transfer to get us to 0x4200 */
 	ut_expected_io_set_iov(expected_io, 1,
 			       (void *)(iov[BDEV_IO_NUM_CHILD_IOV - 1].iov_base), 0x1d2);
 	TAILQ_INSERT_TAIL(&g_bdev_ut_channel->expected_io, expected_io, link);
