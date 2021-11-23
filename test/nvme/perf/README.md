@@ -105,5 +105,5 @@ For SPDK fio plugin iodepth is multiplied by number of devices. When this option
 
 Results are stored in "results" folder. After each workload, to this folder are copied files with:
 fio configuration file, json files with fio results and logs with latiencies with sampling interval 250 ms.
-Number of copied files depends from number of repeats of each workload. Additionall csv file is created with averaged
+Number of copied files depends from number of repeats of each workload. Additionally csv file is created with averaged
 results of all workloads.
