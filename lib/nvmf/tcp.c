@@ -208,7 +208,7 @@ struct spdk_nvmf_tcp_req  {
 	 * twice at the same time, add a debug flag here for init/fini.
 	 */
 	bool					pdu_in_use;
-	bool					has_incapsule_data;
+	bool					has_in_capsule_data;
 
 	/* transfer_tag */
 	uint16_t				ttag;
@@ -389,7 +389,7 @@ nvmf_tcp_req_get(struct spdk_nvmf_tcp_qpair *tqpair)
 
 	memset(&tcp_req->rsp, 0, sizeof(tcp_req->rsp));
 	tcp_req->h2c_offset = 0;
-	tcp_req->has_incapsule_data = false;
+	tcp_req->has_in_capsule_data = false;
 	tcp_req->req.dif_enabled = false;
 
 	TAILQ_REMOVE(&tqpair->tcp_req_free_queue, tcp_req, state_link);
@@ -2178,7 +2178,7 @@ nvmf_tcp_req_parse_sgl(struct spdk_nvmf_tcp_req *tcp_req,
 		   sgl->unkeyed.subtype == SPDK_NVME_SGL_SUBTYPE_OFFSET) {
 		uint64_t offset = sgl->address;
 		uint32_t max_len = transport->opts.in_capsule_data_size;
-		assert(tcp_req->has_incapsule_data);
+		assert(tcp_req->has_in_capsule_data);
 
 		SPDK_DEBUGLOG(nvmf_tcp, "In-capsule data: offset 0x%" PRIx64 ", length 0x%x\n",
 			      offset, length);
@@ -2424,7 +2424,7 @@ request_transfer_out(struct spdk_nvmf_request *req)
 }
 
 static void
-nvmf_tcp_set_incapsule_data(struct spdk_nvmf_tcp_qpair *tqpair,
+nvmf_tcp_set_in_capsule_data(struct spdk_nvmf_tcp_qpair *tqpair,
 			    struct spdk_nvmf_tcp_req *tcp_req)
 {
 	struct nvme_tcp_pdu *pdu;
@@ -2438,7 +2438,7 @@ nvmf_tcp_set_incapsule_data(struct spdk_nvmf_tcp_qpair *tqpair,
 	}
 
 	if (pdu->hdr.common.plen != plen) {
-		tcp_req->has_incapsule_data = true;
+		tcp_req->has_in_capsule_data = true;
 	}
 }
 
@@ -2510,9 +2510,9 @@ nvmf_tcp_req_process(struct spdk_nvmf_tcp_transport *ttransport,
 				break;
 			}
 
-			nvmf_tcp_set_incapsule_data(tqpair, tcp_req);
+			nvmf_tcp_set_in_capsule_data(tqpair, tcp_req);
 
-			if (!tcp_req->has_incapsule_data) {
+			if (!tcp_req->has_in_capsule_data) {
 				nvmf_tcp_qpair_set_recv_state(tqpair, NVME_TCP_PDU_RECV_STATE_AWAIT_PDU_READY);
 			}
 
@@ -2524,7 +2524,7 @@ nvmf_tcp_req_process(struct spdk_nvmf_tcp_transport *ttransport,
 
 			assert(tcp_req->req.xfer != SPDK_NVME_DATA_NONE);
 
-			if (!tcp_req->has_incapsule_data && (&tcp_req->req != STAILQ_FIRST(&group->pending_buf_queue))) {
+			if (!tcp_req->has_in_capsule_data && (&tcp_req->req != STAILQ_FIRST(&group->pending_buf_queue))) {
 				SPDK_DEBUGLOG(nvmf_tcp,
 					      "Not the first element to wait for the buf for tcp_req(%p) on tqpair=%p\n",
 					      tcp_req, tqpair);
@@ -2630,7 +2630,7 @@ nvmf_tcp_req_process(struct spdk_nvmf_tcp_transport *ttransport,
 			spdk_trace_record(TRACE_TCP_REQUEST_STATE_COMPLETED, 0, 0, (uintptr_t)tcp_req, tqpair);
 			if (tcp_req->req.data_from_pool) {
 				spdk_nvmf_request_free_buffers(&tcp_req->req, group, transport);
-			} else if (spdk_unlikely(tcp_req->has_incapsule_data && (tcp_req->cmd.opc == SPDK_NVME_OPC_FABRIC ||
+			} else if (spdk_unlikely(tcp_req->has_in_capsule_data && (tcp_req->cmd.opc == SPDK_NVME_OPC_FABRIC ||
 						 tqpair->qpair.qid == 0) && tcp_req->req.length > transport->opts.in_capsule_data_size)) {
 				tgroup = SPDK_CONTAINEROF(group, struct spdk_nvmf_tcp_poll_group, group);
 				assert(tgroup->control_msg_list);

@@ -573,7 +573,7 @@ nvme_tcp_req_init(struct nvme_tcp_qpair *tqpair, struct nvme_request *req,
 	struct spdk_nvme_ctrlr *ctrlr = tqpair->qpair.ctrlr;
 	int rc = 0;
 	enum spdk_nvme_data_transfer xfer;
-	uint32_t max_incapsule_data_size;
+	uint32_t max_in_capsule_data_size;
 
 	tcp_req->req = req;
 	req->cmd.cid = tcp_req->cid;
@@ -602,12 +602,12 @@ nvme_tcp_req_init(struct nvme_tcp_qpair *tqpair, struct nvme_request *req,
 		xfer = spdk_nvme_opc_get_data_transfer(req->cmd.opc);
 	}
 	if (xfer == SPDK_NVME_DATA_HOST_TO_CONTROLLER) {
-		max_incapsule_data_size = ctrlr->ioccsz_bytes;
+		max_in_capsule_data_size = ctrlr->ioccsz_bytes;
 		if ((req->cmd.opc == SPDK_NVME_OPC_FABRIC) || nvme_qpair_is_admin_queue(&tqpair->qpair)) {
-			max_incapsule_data_size = SPDK_NVME_TCP_IN_CAPSULE_DATA_MAX_SIZE;
+			max_in_capsule_data_size = SPDK_NVME_TCP_IN_CAPSULE_DATA_MAX_SIZE;
 		}
 
-		if (req->payload_size <= max_incapsule_data_size) {
+		if (req->payload_size <= max_in_capsule_data_size) {
 			req->cmd.dptr.sgl1.unkeyed.type = SPDK_NVME_SGL_TYPE_DATA_BLOCK;
 			req->cmd.dptr.sgl1.unkeyed.subtype = SPDK_NVME_SGL_SUBTYPE_OFFSET;
 			req->cmd.dptr.sgl1.address = 0;
