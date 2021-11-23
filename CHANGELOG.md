@@ -973,11 +973,11 @@ query the capabilities of the currently enabled accel engine back-end.
 
 A new capability, CRC-32C, was added via `spdk_accel_submit_crc32c`.
 
-The software accel engine implemenation has added support for CRC-32C.
+The software accel engine implementation has added support for CRC-32C.
 
 A new capability, compare, was added via `spdk_accel_submit_compare`.
 
-The software accel engine implemenation has added support for compare.
+The software accel engine implementation has added support for compare.
 
 Several APIs were added to `accel_engine.h` to support batched submission
 of operations.
