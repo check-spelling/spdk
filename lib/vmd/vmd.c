@@ -933,7 +933,7 @@ vmd_dev_init(struct vmd_pci_device *dev)
  * The bus number is scanned and if a device is found, based on the header_type, create
  * either PciBridge(1) or PciDevice(0).
  *
- * If a PciBridge, assign bus numbers and rescan new bus. The currenty PciBridge being
+ * If a PciBridge, assign bus numbers and rescan new bus. The currently PciBridge being
  * scanned becomes the passed in parent_bridge with the new bus number.
  *
  * The linked list becomes list of pciBridges with PciDevices attached.
