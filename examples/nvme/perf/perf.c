@@ -2959,7 +2959,7 @@ cleanup:
 	pthread_mutex_destroy(&g_stats_mutex);
 
 	if (rc != 0) {
-		fprintf(stderr, "%s: errors occured\n", argv[0]);
+		fprintf(stderr, "%s: errors occurred\n", argv[0]);
 	}
 
 	return rc;

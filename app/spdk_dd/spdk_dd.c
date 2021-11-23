@@ -1167,7 +1167,7 @@ main(int argc, char **argv)
 
 	rc = spdk_app_start(&opts, dd_run, NULL);
 	if (rc) {
-		SPDK_ERRLOG("Error occured while performing copy\n");
+		SPDK_ERRLOG("Error occurred while performing copy\n");
 	}
 
 	dd_free();
