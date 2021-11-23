@@ -1173,7 +1173,7 @@ nvme_tcp_send_icreq_complete(void *cb_arg)
 	tqpair->flags.icreq_send_ack = true;
 
 	if (tqpair->state == NVME_TCP_QPAIR_STATE_INITIALIZING) {
-		SPDK_DEBUGLOG(nvme, "tqpair %p %u, finilize icresp\n", tqpair, tqpair->qpair.id);
+		SPDK_DEBUGLOG(nvme, "tqpair %p %u, finalize icresp\n", tqpair, tqpair->qpair.id);
 		tqpair->state = NVME_TCP_QPAIR_STATE_FABRIC_CONNECT_SEND;
 	}
 }
