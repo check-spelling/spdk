@@ -227,12 +227,12 @@ function create_bdev_subsystem_config() {
 	if [[ $SPDK_TEST_CRYPTO -eq 1 ]]; then
 		tgt_rpc bdev_malloc_create 8 1024 --name MallocForCryptoBdev
 		if [[ $(lspci -d:37c8 | wc -l) -eq 0 ]]; then
-			local crypto_dirver=crypto_aesni_mb
+			local crypto_driver=crypto_aesni_mb
 		else
-			local crypto_dirver=crypto_qat
+			local crypto_driver=crypto_qat
 		fi
 
-		tgt_rpc bdev_crypto_create MallocForCryptoBdev CryptoMallocBdev $crypto_dirver 0123456789123456
+		tgt_rpc bdev_crypto_create MallocForCryptoBdev CryptoMallocBdev $crypto_driver 0123456789123456
 		expected_notifications+=(
 			bdev_register:MallocForCryptoBdev
 			bdev_register:CryptoMallocBdev
