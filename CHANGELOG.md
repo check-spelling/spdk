@@ -1855,7 +1855,7 @@ modules. When using partition type virtual bdevs, block address space is
 remapped during I/O processing and DIF reference tag is remapped accordingly.
 
 Added spdk_bdev_*_with_md() functions allowing for IO with metadata being transferred in
-separate buffer. To check support for separatate metadata, use spdk_bdev_is_md_separate().
+separate buffer. To check support for separate metadata, use spdk_bdev_is_md_separate().
 
 All bdevs now have a UUID. For devices whose backing hardware does not provide a UUID,
 one is automatically generated. Across runs of SPDK, bdevs whose UUID is automatically
@@ -1874,7 +1874,7 @@ limited requests in NVMe driver layer.
 Added spdk_nvme_ctrlr_get_transport_id() to get the transport ID from a
 previously attached controller.
 
-Nvme Opal library spdk_opal_cmd deprecated. Adding seperate command APIs.
+Nvme Opal library spdk_opal_cmd deprecated. Adding separate command APIs.
 NVMe Opal library add support for activating locking SP which will make the transaction
 from "Manufactured-Inactive" state to "Manufactured" state. Upon successfully invoking
 of this method, lock and unlock features will be enabled.
