@@ -302,7 +302,7 @@ p99_99_lat_disks_usec=0
 stdev_disks_usec=0
 mean_slat_disks_usec=0
 mean_clat_disks_usec=0
-#Run each workolad $REPEAT_NO times
+#Run each workload $REPEAT_NO times
 for ((j = 0; j < REPEAT_NO; j++)); do
 	if [ $PLUGIN = "spdk-perf-bdev" ]; then
 		run_bdevperf > $TMP_RESULT_FILE
