@@ -168,7 +168,7 @@ invalid_blk_request(struct spdk_vhost_blk_task *task, uint8_t status)
 /*
  * Process task's descriptor chain and setup data related fields.
  * Return
- *   total size of suplied buffers
+ *   total size of supplied buffers
  *
  *   FIXME: Make this function return to rd_cnt and wr_cnt
  */
