@@ -403,7 +403,7 @@ int main(int argc, char **argv)
 	num_failures = CU_get_number_of_failures();
 	CU_cleanup_registry();
 
-	/* This is for ASAN. Don't know why but if pointer is left in global varaible
+	/* This is for ASAN. Don't know why but if pointer is left in global variable
 	 * it won't be detected as leak. */
 	g_request = NULL;
 	return num_failures;
