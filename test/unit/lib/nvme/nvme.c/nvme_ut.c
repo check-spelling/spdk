@@ -689,7 +689,7 @@ test_nvme_allocate_request_null(void)
 	req = nvme_allocate_request_null(&qpair, cb_fn, cb_arg);
 
 	/*
-	 * Compare the req with the parmaters that we passed in
+	 * Compare the req with the parameters that we passed in
 	 * as well as what the function is supposed to update.
 	 */
 	SPDK_CU_ASSERT_FATAL(req != NULL);
