@@ -1331,7 +1331,7 @@ SPDK_STATIC_ASSERT(sizeof(struct spdk_nvme_cpl) == 16, "Incorrect size");
 struct spdk_nvme_dsm_range {
 	union {
 		struct {
-			uint32_t af		: 4; /**< access frequencey */
+			uint32_t af		: 4; /**< access frequency */
 			uint32_t al		: 2; /**< access latency */
 			uint32_t reserved0	: 2;
 
