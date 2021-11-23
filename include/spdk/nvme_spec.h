@@ -836,7 +836,7 @@ union spdk_nvme_feat_interrupt_coalescing {
 		/** Aggregation Threshold */
 		uint32_t thr : 8;
 
-		/** Aggregration time */
+		/** Aggregation time */
 		uint32_t time : 8;
 
 		uint32_t reserved : 16;
