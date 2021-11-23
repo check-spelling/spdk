@@ -98,7 +98,7 @@ verify_nr_hugepages() {
 	# There's no obvious way of determining which NUMA node is going to end
 	# up with an odd number of hugepages in case such number was actually
 	# allocated by the kernel. Considering that, let's simply check if our
-	# expaction is met by sorting and comparing it with nr of hugepages that
+	# expectation is met by sorting and comparing it with nr of hugepages that
 	# was actually allocated on each node.
 
 	for node in "${!nodes_test[@]}"; do
