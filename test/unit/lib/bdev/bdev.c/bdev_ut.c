@@ -1650,7 +1650,7 @@ bdev_io_boundary_split_test(void)
 	CU_ASSERT(g_io_done == true);
 	CU_ASSERT(g_io_status == SPDK_BDEV_IO_STATUS_FAILED);
 
-	/* Test if a multi vector command terminated with failure before continueing
+	/* Test if a multi vector command terminated with failure before continuing
 	 * splitting process when one of child I/O failed.
 	 * The multi vector command is as same as the above that needs to be split by strip
 	 * and then needs to be split further due to the capacity of child iovs.
