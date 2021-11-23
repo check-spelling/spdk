@@ -154,7 +154,7 @@ size_t spdk_iovcpy(struct iovec *siov, size_t siovcnt, struct iovec *diov, size_
 	} while (0)
 
 /**
- * Add two sequece numbers s1 and s2
+ * Add two sequence numbers s1 and s2
  *
  * \param s1 First sequence number
  * \param s2 Second sequence number
