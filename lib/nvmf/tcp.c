@@ -1633,7 +1633,7 @@ nvmf_tcp_h2c_data_payload_handle(struct spdk_nvmf_tcp_transport *ttransport,
 	 * acknowledged before moving on. */
 	if (tcp_req->h2c_offset == tcp_req->req.length &&
 	    tcp_req->state == TCP_REQUEST_STATE_TRANSFERRING_HOST_TO_CONTROLLER) {
-		/* After receving all the h2c data, we need to check whether there is
+		/* After receiving all the h2c data, we need to check whether there is
 		 * transient transport error */
 		rsp = &tcp_req->req.rsp->nvme_cpl;
 		if (spdk_unlikely(rsp->status.sc == SPDK_NVME_SC_COMMAND_TRANSIENT_TRANSPORT_ERROR)) {
@@ -2504,7 +2504,7 @@ nvmf_tcp_req_process(struct spdk_nvmf_tcp_transport *ttransport,
 
 			/* If no data to transfer, ready to execute. */
 			if (tcp_req->req.xfer == SPDK_NVME_DATA_NONE) {
-				/* Reset the tqpair receving pdu state */
+				/* Reset the tqpair receiving pdu state */
 				nvmf_tcp_qpair_set_recv_state(tqpair, NVME_TCP_PDU_RECV_STATE_AWAIT_PDU_READY);
 				nvmf_tcp_req_set_state(tcp_req, TCP_REQUEST_STATE_READY_TO_EXECUTE);
 				break;
@@ -2536,7 +2536,7 @@ nvmf_tcp_req_process(struct spdk_nvmf_tcp_transport *ttransport,
 			rc = nvmf_tcp_req_parse_sgl(tcp_req, transport, group);
 			if (rc < 0) {
 				STAILQ_REMOVE_HEAD(&group->pending_buf_queue, buf_link);
-				/* Reset the tqpair receving pdu state */
+				/* Reset the tqpair receiving pdu state */
 				nvmf_tcp_qpair_set_recv_state(tqpair, NVME_TCP_PDU_RECV_STATE_ERROR);
 				nvmf_tcp_req_set_state(tcp_req, TCP_REQUEST_STATE_READY_TO_COMPLETE);
 				tcp_req->req.rsp->nvme_cpl.cid = tcp_req->req.cmd->nvme_cmd.cid;
