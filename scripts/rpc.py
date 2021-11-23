@@ -297,7 +297,7 @@ if __name__ == "__main__":
         default=0,
     )
     p.add_argument('cache_bdev_name', help='Name of underlying cache bdev')
-    p.add_argument('core_bdev_name', help='Name of unerlying core bdev')
+    p.add_argument('core_bdev_name', help='Name of underlying core bdev')
     p.set_defaults(func=bdev_ocf_create)
 
     def bdev_ocf_delete(args):
