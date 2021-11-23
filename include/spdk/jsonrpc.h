@@ -319,7 +319,7 @@ int spdk_jsonrpc_client_send_request(struct spdk_jsonrpc_client *client,
  * a time while no other threads are actively \c client object.
  *
  * \param client JSON-RPC client.
- * \param timeout Time in miliseconds this function will block. -1 block forever, 0 don't block.
+ * \param timeout Time in milliseconds this function will block. -1 block forever, 0 don't block.
  *
  * \return If no error occurred, this function returns a non-negative number indicating how
  * many ready responses can be retrieved. If an error occurred, this function returns one of
