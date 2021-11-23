@@ -2321,7 +2321,7 @@ Format: 'user:u1 secret:s1 muser:mu1 msecret:ms1,user:u2 secret:s2 muser:mu2 mse
     p.add_argument('--cpumask', help='cpu mask for this controller')
     p.add_argument("-r", "--readonly", action='store_true', help='Set controller as read-only')
     p.add_argument("-p", "--packed_ring", action='store_true', help='Set controller as packed ring supported')
-    p.add_argument("-l", "--packed_ring_recovery", action='store_true', help='Enable packed ring live reocvery')
+    p.add_argument("-l", "--packed_ring_recovery", action='store_true', help='Enable packed ring live recovery')
     p.set_defaults(func=vhost_create_blk_controller)
 
     def vhost_get_controllers(args):
