@@ -1942,7 +1942,7 @@ spdk_sock_set_priority() is added to set the priority of the socket.
 
 Added thread_get_stats RPC method to retrieve existing statistics.
 
-Added nvmf_get_stats RPC method to retrieve NVMf susbsystem statistics.
+Added nvmf_get_stats RPC method to retrieve NVMf subsystem statistics.
 
 Response buffers for RPC requests are now always pre-allocated, which implies
 that all spdk_jsonrpc_begin_result() calls always succeed and return a valid
@@ -3143,7 +3143,7 @@ The NVMe-oF target no longer requires any in-capsule data buffers to run, and
 the feature is now entirely optional. Previously, at least 4 KiB in-capsule
 data buffers were required.
 
-NVMe-oF subsytems have a new configuration option, AllowAnyHost, to control
+NVMe-oF subsystems have a new configuration option, AllowAnyHost, to control
 whether the host NQN whitelist is enforced when accepting new connections.
 If no Host options have been specified and AllowAnyHost is disabled, the
 connection will be denied; this is a behavior change from previous releases,

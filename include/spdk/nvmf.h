@@ -385,7 +385,7 @@ typedef void (*nvmf_subsystem_destroy_cb)(void *cb_arg);
  * return value is -EINPROGRESS
  * \param cpl_cb_arg Optional user context to be passed to \b cpl_cb
  *
- * \retval 0 if sybsystem is destroyed, \b cpl_cb is not called is that case
+ * \retval 0 if subsystem is destroyed, \b cpl_cb is not called is that case
  * \retval -EINVAl if \b subsystem is a NULL pointer
  * \retval -EAGAIN if \b subsystem is not in INACTIVE state
  * \retval -EALREADY if subsystem destruction is already started
@@ -705,7 +705,7 @@ void spdk_nvmf_subsystem_allow_any_listener(
  * \return true if this subsystem allows dynamic management of listen address list,
  *  or false if only allows addresses in the list configured during subsystem setup.
  */
-bool spdk_nvmf_subsytem_any_listener_allowed(
+bool spdk_nvmf_subsystem_any_listener_allowed(
 	struct spdk_nvmf_subsystem *subsystem);
 
 /**
@@ -795,7 +795,7 @@ uint32_t spdk_nvmf_subsystem_add_ns_ext(struct spdk_nvmf_subsystem *subsystem,
 					const char *ptpl_file);
 
 /**
- * Remove a namespace from a subsytem.
+ * Remove a namespace from a subsystem.
  *
  * May only be performed on subsystems in the PAUSED or INACTIVE states.
  * Additionally, the namespace must be paused.
