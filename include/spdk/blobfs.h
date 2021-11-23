@@ -120,7 +120,7 @@ typedef void (*fs_send_request_fn)(fs_request_fn fn, void *arg);
 /**
  * Initialize a spdk_blobfs_opts structure to the default option values.
  *
- * \param opts spdk_blobf_opts struture to intialize.
+ * \param opts spdk_blobf_opts struture to initialize.
  */
 void spdk_fs_opts_init(struct spdk_blobfs_opts *opts);
 
