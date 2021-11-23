@@ -1547,7 +1547,7 @@ poller_register(spdk_poller_fn fn,
 			spdk_poller_register_interrupt(poller, period_poller_set_interrupt_mode, NULL);
 		} else {
 			/* If the poller doesn't have a period, create interruptfd that's always
-			 * busy automatically when runnning in interrupt mode.
+			 * busy automatically when running in interrupt mode.
 			 */
 			rc = busy_poller_interrupt_init(poller);
 			if (rc > 0) {
