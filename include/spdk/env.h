@@ -360,7 +360,7 @@ typedef void (spdk_mempool_obj_cb_t)(struct spdk_mempool *mp,
  * SPDK_MEMPOOL_DEFAULT_CACHE_SIZE for a reasonable default, or 0 for no per-core cache.
  * \param socket_id Socket ID to allocate memory on, or SPDK_ENV_SOCKET_ID_ANY
  * for any socket.
- * \param obj_init User provided object calllback initialization function.
+ * \param obj_init User provided object callback initialization function.
  * \param obj_init_arg User provided callback initialization function argument.
  *
  * \return a pointer to the created memory pool.
