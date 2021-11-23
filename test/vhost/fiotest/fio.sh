@@ -38,7 +38,7 @@ function usage() {
 	echo "                          All VMs will run the same fio job when FIO executes."
 	echo "                          (no unique jobs for specific VMs)"
 	echo "    --dry-run             Don't perform any tests, run only and wait for enter to terminate"
-	echo "    --no-shutdown         Don't shutdown at the end but leave envirionment working"
+	echo "    --no-shutdown         Don't shutdown at the end but leave environment working"
 	echo "    --vm=NUM[,OS][,DISKS] VM configuration. This parameter might be used more than once:"
 	echo "                          NUM - VM number (mandatory)"
 	echo "                          OS - VM os disk path (optional)"
