@@ -993,7 +993,7 @@ typedef void (*spdk_nvmf_transport_destroy_done_cb)(void *cb_arg);
 /**
  * Destroy a protocol transport
  *
- * \param transport The transport to destory
+ * \param transport The transport to destroy
  * \param cb_fn A callback that will be called once the transport is destroyed
  * \param cb_arg A context argument passed to cb_fn.
  *
