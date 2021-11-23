@@ -44,7 +44,7 @@ enum spdk_nvmf_request_exec_status {
 };
 
 /**
- * Fills the identify controller attributes for the specified conroller
+ * Fills the identify controller attributes for the specified controller
  *
  * \param ctrlr The NVMe-oF controller
  * \param cdata The filled in identify controller attributes
@@ -54,7 +54,7 @@ int spdk_nvmf_ctrlr_identify_ctrlr(struct spdk_nvmf_ctrlr *ctrlr,
 				   struct spdk_nvme_ctrlr_data *cdata);
 
 /**
- * Fills the identify namespace attributes for the specified conroller
+ * Fills the identify namespace attributes for the specified controller
  *
  * \param ctrlr The NVMe-oF controller
  * \param cmd The NVMe command

@@ -2287,7 +2287,7 @@ Format: 'user:u1 secret:s1 muser:mu1 msecret:ms1,user:u2 secret:s2 muser:mu2 mse
     p = subparsers.add_parser('vhost_scsi_controller_add_target',
                               aliases=['add_vhost_scsi_lun'],
                               help='Add lun to vhost controller')
-    p.add_argument('ctrlr', help='conntroller name where add lun')
+    p.add_argument('ctrlr', help='controller name where add lun')
     p.add_argument('scsi_target_num', help='scsi_target_num', type=int)
     p.add_argument('bdev_name', help='bdev name')
     p.set_defaults(func=vhost_scsi_controller_add_target)
