@@ -103,7 +103,7 @@ struct spdk_idxd_io_channel {
 	 */
 	void					*desc_base;
 	TAILQ_HEAD(, idxd_ops)			ops_pool;
-	/* Current list of oustanding operations to poll. */
+	/* Current list of outstanding operations to poll. */
 	TAILQ_HEAD(op_head, idxd_ops)		ops_outstanding;
 	void					*ops_base;
 
