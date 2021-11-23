@@ -1476,7 +1476,7 @@ print_controller(struct spdk_nvme_ctrlr *ctrlr, const struct spdk_nvme_transport
 		printf("Asymmetric Namespace Access Log Page:  Supported\n");
 		printf("ANA Transition Time                 :  %u sec\n", cdata->anatt);
 		printf("\n");
-		printf("Aymmetric Namespace Access Capabilities\n");
+		printf("Asymmetric Namespace Access Capabilities\n");
 		printf("  ANA Optimized State               : %s\n",
 		       cdata->anacap.ana_optimized_state ? "Supported" : "Not Supported");
 		printf("  ANA Non-Optimized State           : %s\n",
