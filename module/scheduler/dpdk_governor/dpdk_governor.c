@@ -152,7 +152,7 @@ _init(void)
 		return rc;
 	}
 
-	/* When initalization of a core failed, deinitalize prior cores. */
+	/* When initalization of a core failed, deinitialize prior cores. */
 	SPDK_ENV_FOREACH_CORE(j) {
 		if (j >= i) {
 			break;
