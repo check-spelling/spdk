@@ -305,7 +305,7 @@ void spdk_bs_unload(struct spdk_blob_store *bs, spdk_bs_op_complete cb_fn, void 
 /**
  * Set a super blob on the given blobstore.
  *
- * This will be retrievable immediately after spdk_bs_load() on the next initializaiton.
+ * This will be retrievable immediately after spdk_bs_load() on the next initialization.
  *
  * \param bs blobstore.
  * \param blobid The id of the blob which will be set as the super blob.
