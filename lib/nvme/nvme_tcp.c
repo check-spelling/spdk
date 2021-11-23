@@ -1298,7 +1298,7 @@ nvme_tcp_c2h_term_req_hdr_handle(struct nvme_tcp_qpair *tqpair,
 	enum spdk_nvme_tcp_term_req_fes fes;
 
 	if (c2h_term_req->fes > SPDK_NVME_TCP_TERM_REQ_FES_INVALID_DATA_UNSUPPORTED_PARAMETER) {
-		SPDK_ERRLOG("Fatal Error Stauts(FES) is unknown for c2h_term_req pdu=%p\n", pdu);
+		SPDK_ERRLOG("Fatal Error Status(FES) is unknown for c2h_term_req pdu=%p\n", pdu);
 		fes = SPDK_NVME_TCP_TERM_REQ_FES_INVALID_HEADER_FIELD;
 		error_offset = offsetof(struct spdk_nvme_tcp_term_req_hdr, fes);
 		goto end;
