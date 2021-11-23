@@ -121,7 +121,7 @@ struct spdk_nvmf_fc_buffer_desc {
 };
 
 /*
- * ABTS hadling context
+ * ABTS handling context
  */
 struct spdk_nvmf_fc_abts_ctx {
 	bool handled;
