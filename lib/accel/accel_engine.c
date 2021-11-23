@@ -895,7 +895,7 @@ spdk_accel_batch_cancel(struct spdk_io_channel *ch, struct spdk_accel_batch *bat
 	struct accel_io_channel *accel_ch = spdk_io_channel_get_ctx(ch);
 	struct spdk_accel_task *accel_task;
 
-	/* Cancel anything currently oustanding for this batch. */
+	/* Cancel anything currently outstanding for this batch. */
 	while ((batch = TAILQ_FIRST(&accel_ch->batches))) {
 		TAILQ_REMOVE(&accel_ch->batches, batch, link);
 		while ((accel_task = TAILQ_FIRST(&batch->hw_tasks))) {
