@@ -899,7 +899,7 @@ nvme_tcp_pdu_ch_handle(struct nvme_tcp_qpair *tqpair)
 		}
 	} else {
 		if (spdk_unlikely(!nvme_tcp_qpair_recv_state_valid(tqpair))) {
-			SPDK_ERRLOG("The TCP/IP tqpair connection is not negotitated\n");
+			SPDK_ERRLOG("The TCP/IP tqpair connection is not negotiated\n");
 			fes = SPDK_NVME_TCP_TERM_REQ_FES_PDU_SEQUENCE_ERROR;
 			goto err;
 		}

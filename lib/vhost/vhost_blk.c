@@ -562,7 +562,7 @@ process_blk_request(struct spdk_vhost_blk_task *task,
 		}
 
 		/* Unmap this range, SPDK doesn't support it, kernel will enable this flag by default
-		 * without checking unmap feature is negociated or not, the flag isn't mandatory, so
+		 * without checking unmap feature is negotiated or not, the flag isn't mandatory, so
 		 * just print a warning.
 		 */
 		if (desc->flags & VIRTIO_BLK_WRITE_ZEROES_FLAG_UNMAP) {
