@@ -2227,7 +2227,7 @@ be combined with link time optimization which has been available under the
 ### compression bdev/reduce library
 
 Added "reduce" block compression scheme based on using SSDs for storing
-compressed blocks of storage and presistent memory for metadata. Please see
+compressed blocks of storage and persistent memory for metadata. Please see
 [compression](https://spdk.io/doc/bdev.html) for more details.
 
 ## v19.01: NVMe-oF TCP/IP Transport, Open Channel SSD Flash Translation Layer, Caching bdev based on OCF, ISA-L Support, DIF/DIX library
