@@ -492,7 +492,7 @@ int nvmf_bdev_ctrlr_start_zcopy(struct spdk_bdev *bdev,
  * Ends a zcopy operation
  *
  * \param req The NVMe-oF request
- * \param commit Flag indicating whether the buffers shoule be committed
+ * \param commit Flag indicating whether the buffers should be committed
  *
  * \return 0 upon success
  * \return <0 on error

@@ -436,7 +436,7 @@ struct spdk_nvme_transport_id {
 
 	/**
 	 * Transport service id of the NVMe-oF endpoint.  For transports which use
-	 * IP addressing (e.g. RDMA), this field shoud be the port number. For PCIe,
+	 * IP addressing (e.g. RDMA), this field should be the port number. For PCIe,
 	 * and FC this is always a zero length string.
 	 */
 	char trsvcid[SPDK_NVMF_TRSVCID_MAX_LEN + 1];
