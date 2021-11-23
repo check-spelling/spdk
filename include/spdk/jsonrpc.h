@@ -97,7 +97,7 @@ typedef void (*spdk_jsonrpc_conn_closed_fn)(struct spdk_jsonrpc_server_conn *con
  * Function for specific RPC method response parsing handlers.
  *
  * \param parser_ctx context where analysis are put.
- * \param result json values responsed to this method.
+ * \param result json values responded to this method.
  *
  * \return 0 on success.
  *         SPDK_JSON_PARSE_INVALID on failure.
