@@ -2455,7 +2455,7 @@ bdev_io_mix_split_test(void)
 	 */
 
 	/* The first 2 IOs are in an IO boundary.
-	 * After splitting segmemt size the segment num exceeds.
+	 * After splitting segment size the segment num exceeds.
 	 * So it splits to 2 child IOs.
 	 */
 	expected_io = ut_alloc_expected_io(SPDK_BDEV_IO_TYPE_WRITE, 0, 14, 6);
