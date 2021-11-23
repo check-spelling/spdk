@@ -385,7 +385,7 @@ union spdk_nvme_pmrebs_register {
 	uint32_t	raw;
 	struct {
 		/**
-		 * pmr elasicity buffer size units
+		 * pmr elasticity buffer size units
 		 * 0h: Bytes
 		 * 1h: 1 KiB
 		 * 2h: 1 MiB
