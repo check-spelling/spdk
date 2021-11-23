@@ -468,7 +468,7 @@ main(int argc, char **argv)
 	 * can pass in an spdk_bs_opts if we want something other than
 	 * the defaults (cluster size, etc), but here we'll just take the
 	 * defaults.  We'll also pass in a struct that we'll use for
-	 * callbacks so we've got efficient bookeeping of what we're
+	 * callbacks so we've got efficient bookkeeping of what we're
 	 * creating. This is an async operation and bs_init_complete()
 	 * will be called when it is complete.
 	 */
