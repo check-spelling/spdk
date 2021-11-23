@@ -780,7 +780,7 @@ void spdk_blob_io_readv(struct spdk_blob *blob, struct spdk_io_channel *channel,
 
 /**
  * Unmap 'length' io_units beginning at 'offset' io_units on the blob as unused. Unmapped
- * io_units may allow the underlying storage media to behave more effciently.
+ * io_units may allow the underlying storage media to behave more efficiently.
  *
  * \param blob Blob to unmap.
  * \param channel I/O channel used to submit requests.
