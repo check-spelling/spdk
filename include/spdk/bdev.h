@@ -1826,7 +1826,7 @@ void spdk_bdev_histogram_get(struct spdk_bdev *bdev, struct spdk_histogram_data 
  * devices exposing raw access to the physical medium (e.g. Open Channel SSD).
  *
  * \param bdev_desc Block device descriptor
- * \param events Array of media mangement event descriptors
+ * \param events Array of media management event descriptors
  * \param max_events Size of the events array
  *
  * \return number of events retrieved

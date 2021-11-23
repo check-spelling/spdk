@@ -1862,7 +1862,7 @@ print_controller(struct spdk_nvme_ctrlr *ctrlr, const struct spdk_nvme_transport
 		} else {
 			printf("Not Reported\n");
 		}
-		printf("Maximum Thermal Managment Temperature:   ");
+		printf("Maximum Thermal Management Temperature:   ");
 		if (cdata->mxtmt) {
 			printf("%u Kelvin (%d Celsius)\n", cdata->mxtmt, (int)cdata->mxtmt - 273);
 		} else {
