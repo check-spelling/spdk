@@ -780,7 +780,7 @@ enum nvme_ctrlr_state {
 	NVME_CTRLR_STATE_READY,
 
 	/**
-	 * Controller inilialization has an error.
+	 * Controller initialization has an error.
 	 */
 	NVME_CTRLR_STATE_ERROR
 };
