@@ -42,7 +42,7 @@
  * It depends on memory usage of OCF which
  * in itself depends on the workload
  * It is a big number because OCF uses allocators
- * for every request it sends and recieves
+ * for every request it sends and receives
  */
 #define ENV_ALLOCATOR_NBUFS 32767
 #define GET_ELEMENTS_COUNT(_limit) (_limit < 0 ? ENV_ALLOCATOR_NBUFS : _limit)

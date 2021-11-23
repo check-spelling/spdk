@@ -2482,7 +2482,7 @@ RPC `wait_subsystem_init` has been added to allow clients to block untill all su
 ### json rpc
 
 JSON RPC client is now running in non-blocking mode. Requests are sent and received during spdk_jsonrpc_client_poll.
-JSON RPC server can now recieve a callback on connection termination or server shutdown using `spdk_jsonrpc_conn_add_close_cb`
+JSON RPC server can now receive a callback on connection termination or server shutdown using `spdk_jsonrpc_conn_add_close_cb`
 and `spdk_jsonrpc_conn_del_close_cb`.
 
 ## v18.10: Dynamic memory allocation, Crypto Virtual Bdev, jsonrpc-client, SPDKCLI iSCSI and NVMe-oF support
