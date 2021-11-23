@@ -77,7 +77,7 @@ struct spdk_poller;
 typedef void (*spdk_app_shutdown_cb)(void);
 
 /**
- * Signal handler fucntion.
+ * Signal handler function.
  *
  * \param signal Signal number.
  */
