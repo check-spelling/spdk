@@ -256,7 +256,7 @@ class Server:
 
     def configure_tuned(self):
         if not self.tuned_profile:
-            self.log_print("WARNING: Tuned profile not set in configration file. Skipping configuration.")
+            self.log_print("WARNING: Tuned profile not set in configuration file. Skipping configuration.")
             return
 
         self.log_print("Configuring tuned-adm profile to %s." % self.tuned_profile)
