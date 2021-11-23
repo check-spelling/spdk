@@ -6628,7 +6628,7 @@ delete_snapshot_update_extent_pages(void *cb_arg, int bserrno)
 			continue;
 		}
 
-		/* Clone and snapshot both contain partialy filled matching extent pages.
+		/* Clone and snapshot both contain partially filled matching extent pages.
 		 * Update the clone extent page in place with cluster map containing the mix of both. */
 		ctx->next_extent_page = i + 1;
 
