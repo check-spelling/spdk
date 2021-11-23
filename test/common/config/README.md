@@ -53,7 +53,7 @@ To create the VM image manually use following steps:
   - Make sure that only root has read access to the private key.
 3. Install the OS in the VM image (performed on guest):
   - Use the latest Fedora Cloud (Currently Fedora 32).
-  - When partitioning the disk, make one partion that consumes the whole disk mounted at /. Do not encrypt the disk or enable LVM.
+  - When partitioning the disk, make one partition that consumes the whole disk mounted at /. Do not encrypt the disk or enable LVM.
   - Choose the OpenSSH server packages during install.
 4. Post installation configuration (performed on guest):
   - Run the following commands to enable all necessary dependencies:
