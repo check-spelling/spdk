@@ -914,7 +914,7 @@ vmd_dev_init(struct vmd_pci_device *dev)
 
 	if (vmd_is_supported_device(dev)) {
 		spdk_pci_addr_fmt(bdf, sizeof(bdf), &dev->pci.addr);
-		SPDK_DEBUGLOG(vmd, "Initalizing NVMe device at %s\n", bdf);
+		SPDK_DEBUGLOG(vmd, "Initializing NVMe device at %s\n", bdf);
 		dev->pci.parent = dev->bus->vmd->pci;
 		spdk_pci_hook_device(spdk_pci_nvme_get_driver(), &dev->pci);
 	}
