@@ -16,7 +16,7 @@ bdfs=$(get_nvme_bdfs)
 
 $rootdir/scripts/setup.sh reset
 
-# Find bdf that supports Namespace Managment
+# Find bdf that supports Namespace Management
 for bdf in $bdfs; do
 	nvme_name=$(get_nvme_ctrlr_from_bdf ${bdf})
 	if [[ -z "$nvme_name" ]]; then
@@ -33,7 +33,7 @@ for bdf in $bdfs; do
 done
 
 if [[ "${nvme_name}" == "" ]] || [[ "$oacs_ns_manage" -eq 0 ]]; then
-	echo "No NVMe device supporting Namespace managment found"
+	echo "No NVMe device supporting Namespace management found"
 	$rootdir/scripts/setup.sh
 	exit 1
 fi
