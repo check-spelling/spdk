@@ -1766,7 +1766,7 @@ New APIs `spdk_dif_ctx_set_data_offset`, `spdk_dif_verify_stream`,
 `spdk_dif_get_range_with_md`, `spdk_dif_get_length_with_md` have been added,
 and existing APIs `spdk_dif_ctx_init`, `spdk_dif_set_md_interleave_iovs`, and
 `spdk_dif_generate_stream` have been refined to insert or strip DIF by stream
-fasion with any alignment.
+fashion (??) with any alignment.
 
 New APIs `spdk_dif_ctx_set_remapped_init_ref_tag`, `spdk_dif_remap_ref_tag`,
 and `spdk_dix_remap_ref_tag` have been added to remap DIF reference tag.
