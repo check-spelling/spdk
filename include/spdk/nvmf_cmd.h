@@ -107,7 +107,7 @@ void spdk_nvmf_set_passthru_admin_cmd(uint8_t opc, uint32_t forward_nsid);
 
 /**
  * Callback function that is called right before the admin command reply
- * is sent back to the inititator.
+ * is sent back to the initiator.
  *
  * \param req The NVMe-oF request
  */
