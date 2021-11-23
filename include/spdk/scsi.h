@@ -255,7 +255,7 @@ bool spdk_scsi_dev_has_pending_tasks(const struct spdk_scsi_dev *dev,
 				     const struct spdk_scsi_port *initiator_port);
 
 /**
- * Destruct the SCSI decice.
+ * Destruct the SCSI device.
  *
  * \param dev SCSI device.
  * \param cb_fn Callback function.
