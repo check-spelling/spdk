@@ -1000,7 +1000,7 @@ usage(void)
 	printf(" --of Output file. Must specify either --of or --ob.\n");
 	printf(" --ob Output bdev. Must specify either --of or --ob.\n");
 	printf(" --iflag Input file flags.\n");
-	printf(" --oflag Onput file flags.\n");
+	printf(" --oflag Output file flags.\n");
 	printf(" --bs I/O unit size (default: %" PRId64 ")\n", g_opts.io_unit_size);
 	printf(" --qd Queue depth (default: %d)\n", g_opts.queue_depth);
 	printf(" --count I/O unit count. The number of I/O units to copy. (default: all)\n");
