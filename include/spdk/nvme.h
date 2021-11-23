@@ -931,7 +931,7 @@ struct spdk_nvme_probe_ctx *spdk_nvme_probe_async(const struct spdk_nvme_transpo
 		spdk_nvme_remove_cb remove_cb);
 
 /**
- * Proceed with attaching contollers associated with the probe context.
+ * Proceed with attaching controllers associated with the probe context.
  *
  * The probe context is one returned from a previous call to
  * spdk_nvme_probe_async().  Users must call this function on the
@@ -1096,7 +1096,7 @@ int spdk_nvme_ctrlr_reset_async(struct spdk_nvme_ctrlr *ctrlr,
 				struct spdk_nvme_ctrlr_reset_ctx **reset_ctx);
 
 /**
- * Proceed with resetting contoller associated with the controller reset context.
+ * Proceed with resetting controller associated with the controller reset context.
  *
  * The controller reset context is one returned from a previous call to
  * spdk_nvme_ctrlr_reset_async().  Users must call this function on the
