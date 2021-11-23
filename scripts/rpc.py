@@ -476,7 +476,7 @@ if __name__ == "__main__":
     p = subparsers.add_parser('bdev_nvme_set_options', aliases=['set_bdev_nvme_options'],
                               help='Set options for the bdev nvme type. This is startup command.')
     p.add_argument('-a', '--action-on-timeout',
-                   help="Action to take on command time out. Valid valies are: none, reset, abort")
+                   help="Action to take on command time out. Valid values are: none, reset, abort")
     p.add_argument('-t', '--timeout-us',
                    help="Timeout for each command, in microseconds. If 0, don't track timeouts.", type=int)
     p.add_argument('--timeout-admin-us',
