@@ -125,7 +125,7 @@ jsonrpc_client_recv(struct spdk_jsonrpc_client *client)
 	rc = recv(client->sockfd, client->recv_buf + client->recv_offset,
 		  client->recv_buf_size - client->recv_offset - 1, 0);
 	if (rc < 0) {
-		/* For EINTR we pretend that nothing was reveived. */
+		/* For EINTR we pretend that nothing was received. */
 		if (errno == EINTR) {
 			return 0;
 		} else {
