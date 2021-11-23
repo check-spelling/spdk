@@ -302,7 +302,7 @@ struct spdk_nvmf_fc_lsdesc_cr_assoc_cmd {
 SPDK_STATIC_ASSERT(sizeof(struct spdk_nvmf_fc_lsdesc_cr_assoc_cmd) == 1016, "size_mismatch");
 
 /*
- * LS Create Association reqeust payload
+ * LS Create Association request payload
  */
 struct spdk_nvmf_fc_ls_cr_assoc_rqst {
 	struct spdk_nvmf_fc_ls_rqst_w0 w0;
