@@ -154,7 +154,7 @@ struct spdk_jsonrpc_server_conn *spdk_jsonrpc_get_conn(struct spdk_jsonrpc_reque
  * \note Current implementation allow only one close callback per connection.
  *
  * \param conn JSON RPC server connection
- * \param cb calback function
+ * \param cb callback function
  * \param ctx argument for \c cb
  *
  * \return 0 on success, or negated errno code:
@@ -169,7 +169,7 @@ int spdk_jsonrpc_conn_add_close_cb(struct spdk_jsonrpc_server_conn *conn,
  * Remove registered close callback.
  *
  * \param conn JSON RPC server connection
- * \param cb calback function
+ * \param cb callback function
  * \param ctx argument for \c cb
  *
  * \return 0 on success, or negated errno code:
