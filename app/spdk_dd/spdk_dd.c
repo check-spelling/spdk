@@ -227,7 +227,7 @@ dd_show_progress(uint64_t offset, uint64_t length, bool finish)
 		return;
 	}
 
-	/* Find the rigth unit for size displaying (B vs kB vs MB vs GB vs TB) */
+	/* Find the right unit for size displaying (B vs kB vs MB vs GB vs TB) */
 	while (size > 1024 * 10) {
 		size >>= 10;
 		size_unit <<= 10;
@@ -247,7 +247,7 @@ dd_show_progress(uint64_t offset, uint64_t length, bool finish)
 
 	i = 0;
 
-	/* Find the rigth unit for speed displaying (Bps vs kBps vs MBps vs GBps vs TBps) */
+	/* Find the right unit for speed displaying (Bps vs kBps vs MBps vs GBps vs TBps) */
 	while (tmp_speed > 1024) {
 		tmp_speed >>= 10;
 		speed_unit <<= 10;
