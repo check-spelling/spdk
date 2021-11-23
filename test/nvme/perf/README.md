@@ -95,7 +95,7 @@ Specifies how many times run each workload. End results are averages of these wo
 #### --no-preconditioning
 
 By default disks are preconditioned before test using fio with parameters: size=100%, loops=2, bs=1M, w=write,
-iodepth=32, ioengine=spdk. It can be skiped when this option is set.
+iodepth=32, ioengine=spdk. It can be skipped when this option is set.
 
 #### "--no-io-scaling"
 
