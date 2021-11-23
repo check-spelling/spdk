@@ -553,7 +553,7 @@ typedef void (*spdk_bdev_io_get_buf_cb)(struct spdk_io_channel *ch, struct spdk_
  *
  * \param ch The I/O channel the bdev I/O was handled on.
  * \param bdev_io The bdev I/O
- * \param aux_buf Pointer to the allocated buffer.  NULL if there was a failuer such as
+ * \param aux_buf Pointer to the allocated buffer.  NULL if there was a failure such as
  * the size of the buffer to allocate is greater than the permitted maximum.
  */
 typedef void (*spdk_bdev_io_get_aux_buf_cb)(struct spdk_io_channel *ch,
