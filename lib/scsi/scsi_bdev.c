@@ -939,7 +939,7 @@ bdev_scsi_mode_sense_page(struct spdk_bdev *bdev,
 		/* Obsolete (Medium Types Supported) */
 		break;
 	case 0x0c:
-		/* Obsolete (Notch And Partitio) */
+		/* Obsolete (Notch And Partition) */
 		break;
 	case 0x0d:
 		/* Obsolete */
