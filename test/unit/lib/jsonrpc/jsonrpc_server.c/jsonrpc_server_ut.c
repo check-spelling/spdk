@@ -371,7 +371,7 @@ test_parse_request_streaming(void)
 		CU_ASSERT(rc == 0);
 		CU_ASSERT(g_request == NULL);
 
-		/* In case of faile, don't fload console with ussless CU assert fails. */
+		/* In case of failed, don't fload console with ussless CU assert fails. */
 		FREE_REQUEST();
 	}
 
