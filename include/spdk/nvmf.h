@@ -389,7 +389,7 @@ typedef void (*nvmf_subsystem_destroy_cb)(void *cb_arg);
  * \retval -EINVAl if \b subsystem is a NULL pointer
  * \retval -EAGAIN if \b subsystem is not in INACTIVE state
  * \retval -EALREADY if subsystem destruction is already started
- * \retval -EINPROGRESS if subsystem is destroyed asyncronously, cpl_cb will be called in that case
+ * \retval -EINPROGRESS if subsystem is destroyed asynchronously, cpl_cb will be called in that case
  */
 int
 spdk_nvmf_subsystem_destroy(struct spdk_nvmf_subsystem *subsystem, nvmf_subsystem_destroy_cb cpl_cb,
