@@ -1803,7 +1803,7 @@ while some compatibility fixes make their way down the pipeline for 5.1.x kernel
 
 The sock priority setting of the TCP connection owned by the tcp transport is added. It is
 used to optimize the TCP connection performance under designated traffic classes. And the
-priority is used to differeniate the sock priority between SPDK NVMe-oF TCP target application
+priority is used to differentiate the sock priority between SPDK NVMe-oF TCP target application
 and other TCP based applications.
 
 Shared receive queue can now be disabled even for NICs that support it using the
