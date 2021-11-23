@@ -2789,7 +2789,7 @@ struct spdk_nvme_reservation_notification_log {
 };
 SPDK_STATIC_ASSERT(sizeof(struct spdk_nvme_reservation_notification_log) == 64, "Incorrect size");
 
-/* Mask Registration Preempted Notificaton */
+/* Mask Registration Preempted Notification */
 #define SPDK_NVME_REGISTRATION_PREEMPTED_MASK	(1U << 1)
 /* Mask Reservation Released Notification */
 #define SPDK_NVME_RESERVATION_RELEASED_MASK	(1U << 2)
