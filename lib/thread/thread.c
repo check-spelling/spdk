@@ -104,7 +104,7 @@ struct spdk_poller {
 };
 
 enum spdk_thread_state {
-	/* The thread is pocessing poller and message by spdk_thread_poll(). */
+	/* The thread is processing poller and message by spdk_thread_poll(). */
 	SPDK_THREAD_STATE_RUNNING,
 
 	/* The thread is in the process of termination. It reaps unregistering
