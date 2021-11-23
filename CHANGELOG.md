@@ -1531,7 +1531,7 @@ to blobfs.
 Added new parameter `cdw0` to `spdk_bdev_io_complete_nvme_status()` and
 `spdk_bdev_io_get_nvme_status()` that allows setting/getting
 the NVMe completion queue DW0 entry. This allows vendor specific IO commands
-to return commmand specific completion info back to the initiator.
+to return command specific completion info back to the initiator.
 
 Added `spdk_bdev_get_write_unit_size()` function for retrieving required number
 of logical blocks for write operation.
