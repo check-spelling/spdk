@@ -2652,7 +2652,7 @@ spdk_interrupt_mode_enable(void)
 	 * g_spdk_msg_mempool will be valid if thread library is initialized.
 	 */
 	if (g_spdk_msg_mempool) {
-		SPDK_ERRLOG("Failed due to threading library is already initailzied.\n");
+		SPDK_ERRLOG("Failed due to threading library is already initialized.\n");
 		return -1;
 	}
 
