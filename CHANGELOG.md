@@ -1413,7 +1413,7 @@ log page requests.
 ### nvmf
 
 Add SockPriority option in [Transport] section, this can be used for NVMe-oF target
-on TCP transport to set sock priority for the incomming TCP connections.
+on TCP transport to set sock priority for the incoming TCP connections.
 
 The NVMe-oF target now supports plugging out of tree NVMe-oF transports. In order
 to facilitate this feature, several small API changes have been made:
