@@ -3139,7 +3139,7 @@ struct spdk_nvme_firmware_page {
 SPDK_STATIC_ASSERT(sizeof(struct spdk_nvme_firmware_page) == 512, "Incorrect size");
 
 /**
- * Asymmetric Namespace Acccess page (\ref SPDK_NVME_LOG_ASYMMETRIC_NAMESPACE_ACCESS)
+ * Asymmetric Namespace Access page (\ref SPDK_NVME_LOG_ASYMMETRIC_NAMESPACE_ACCESS)
  */
 struct spdk_nvme_ana_page {
 	uint64_t change_count;
