@@ -251,7 +251,7 @@ blob_write(struct hello_context_t *hello_context)
 }
 
 /*
- * Callback function for sync'ing metadata.
+ * Callback function for syncing metadata.
  */
 static void
 sync_complete(void *arg1, int bserrno)

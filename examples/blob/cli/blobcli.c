@@ -277,7 +277,7 @@ close_cb(void *arg1, int bserrno)
 }
 
 /*
- * Callback function for sync'ing metadata.
+ * Callback function for syncing metadata.
  */
 static void
 sync_cb(void *arg1, int bserrno)
