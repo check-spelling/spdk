@@ -179,7 +179,7 @@ enum spdk_opal_token {
 	/* life cycle */
 	SPDK_OPAL_LIFECYCLE		= 0x06,
 
-	/* Autority table */
+	/* Authority table */
 	SPDK_OPAL_AUTH_ENABLE		= 0x05,
 
 	/* ACE table */
@@ -195,7 +195,7 @@ struct spdk_opal_d0_hdr {
 	uint32_t revision;
 	uint32_t reserved_0;
 	uint32_t reserved_1;
-	uint8_t vendor_specfic[32];
+	uint8_t vendor_specific[32];
 };
 SPDK_STATIC_ASSERT(sizeof(struct spdk_opal_d0_hdr) == 48, "Incorrect size");
 

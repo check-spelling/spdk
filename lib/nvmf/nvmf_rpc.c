@@ -1176,7 +1176,7 @@ nvmf_rpc_ns_ctx_free(struct nvmf_rpc_ns_ctx *ctx)
 }
 
 static void
-nvmf_rpc_ns_failback_resumed(struct spdk_nvmf_subsystem *subsystem,
+nvmf_rpc_ns_fallback_resumed(struct spdk_nvmf_subsystem *subsystem,
 			     void *cb_arg, int status)
 {
 	struct nvmf_rpc_ns_ctx *ctx = cb_arg;
@@ -1214,7 +1214,7 @@ nvmf_rpc_ns_resumed(struct spdk_nvmf_subsystem *subsystem,
 			return;
 		}
 
-		rc = spdk_nvmf_subsystem_resume(subsystem, nvmf_rpc_ns_failback_resumed, ctx);
+		rc = spdk_nvmf_subsystem_resume(subsystem, nvmf_rpc_ns_fallback_resumed, ctx);
 		if (rc != 0) {
 			spdk_jsonrpc_send_error_response(request, SPDK_JSONRPC_ERROR_INTERNAL_ERROR, "Internal error");
 			nvmf_rpc_ns_ctx_free(ctx);

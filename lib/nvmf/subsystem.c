@@ -1198,7 +1198,7 @@ spdk_nvmf_subsystem_allow_any_listener(struct spdk_nvmf_subsystem *subsystem,
 }
 
 bool
-spdk_nvmf_subsytem_any_listener_allowed(struct spdk_nvmf_subsystem *subsystem)
+spdk_nvmf_subsystem_any_listener_allowed(struct spdk_nvmf_subsystem *subsystem)
 {
 	return subsystem->flags.allow_any_listener;
 }
@@ -2698,7 +2698,7 @@ nvmf_ns_reservation_acquire(struct spdk_nvmf_ns *ns,
 			/* do nothing */
 			update_sgroup = false;
 		} else if (ns->holder == NULL) {
-			/* fisrt time to acquire the reservation */
+			/* first time to acquire the reservation */
 			nvmf_ns_reservation_acquire_reservation(ns, key.crkey, rtype, reg);
 		} else {
 			SPDK_ERRLOG("Invalid rtype or current registrant is not holder\n");

@@ -320,7 +320,7 @@ static const struct nvme_string generic_status[] = {
 	{ SPDK_NVME_SC_INVALID_NAMESPACE_OR_FORMAT, "INVALID NAMESPACE OR FORMAT" },
 	{ SPDK_NVME_SC_COMMAND_SEQUENCE_ERROR, "COMMAND SEQUENCE ERROR" },
 	{ SPDK_NVME_SC_INVALID_SGL_SEG_DESCRIPTOR, "INVALID SGL SEGMENT DESCRIPTOR" },
-	{ SPDK_NVME_SC_INVALID_NUM_SGL_DESCIRPTORS, "INVALID NUMBER OF SGL DESCRIPTORS" },
+	{ SPDK_NVME_SC_INVALID_NUM_SGL_DESCRIPTORS, "INVALID NUMBER OF SGL DESCRIPTORS" },
 	{ SPDK_NVME_SC_DATA_SGL_LENGTH_INVALID, "DATA SGL LENGTH INVALID" },
 	{ SPDK_NVME_SC_METADATA_SGL_LENGTH_INVALID, "METADATA SGL LENGTH INVALID" },
 	{ SPDK_NVME_SC_SGL_DESCRIPTOR_TYPE_INVALID, "SGL DESCRIPTOR TYPE INVALID" },
@@ -1015,7 +1015,7 @@ nvme_qpair_submit_request(struct spdk_nvme_qpair *qpair, struct nvme_request *re
 	if (spdk_unlikely(!STAILQ_EMPTY(&qpair->queued_req) && req->num_children == 0)) {
 		/*
 		 * Requests that have no children should be sent to the transport after all
-		 * currently queued requests. Requests with chilren will be split and go back
+		 * currently queued requests. Requests with children will be split and go back
 		 * through this path.  We need to make an exception for the fabrics commands
 		 * while the qpair is connecting to be able to send the connect command
 		 * asynchronously.

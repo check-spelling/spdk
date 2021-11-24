@@ -61,7 +61,7 @@ scsi_nvme_translate_test(void)
 	CU_ASSERT_EQUAL(asc, SPDK_SCSI_ASC_WARNING);
 	CU_ASSERT_EQUAL(ascq, SPDK_SCSI_ASCQ_POWER_LOSS_EXPECTED);
 
-	bdev_io.internal.error.nvme.sc = SPDK_NVME_SC_INVALID_NUM_SGL_DESCIRPTORS;
+	bdev_io.internal.error.nvme.sc = SPDK_NVME_SC_INVALID_NUM_SGL_DESCRIPTORS;
 	spdk_scsi_nvme_translate(&bdev_io, &sc, &sk, &asc, &ascq);
 	CU_ASSERT_EQUAL(sc, SPDK_SCSI_STATUS_CHECK_CONDITION);
 	CU_ASSERT_EQUAL(sk, SPDK_SCSI_SENSE_ILLEGAL_REQUEST);

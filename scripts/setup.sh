@@ -552,7 +552,7 @@ function reset_linux() {
 
 function status_linux() {
 	echo "Hugepages" >&2
-	printf "%-6s %10s %8s / %6s\n" "node" "hugesize" "free" "total" >&2
+	printf "%-6s %10s %8s / %6s\n" "node" "hugepagesize" "free" "total" >&2
 
 	numa_nodes=0
 	shopt -s nullglob
@@ -776,7 +776,7 @@ fi
 
 if [[ $os == Linux ]]; then
 	if [[ -n $HUGEPGSZ && ! -e /sys/kernel/mm/hugepages/hugepages-${HUGEPGSZ}kB ]]; then
-		echo "${HUGEPGSZ}kB is not supported by the running kernel, ingoring" >&2
+		echo "${HUGEPGSZ}kB is not supported by the running kernel, ignoring" >&2
 		unset -v HUGEPGSZ
 	fi
 
