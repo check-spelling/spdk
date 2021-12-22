@@ -350,7 +350,7 @@ static void test_nvme_completion_is_retry(void)
 	cpl.status.sc = SPDK_NVME_SC_INVALID_SGL_SEG_DESCRIPTOR;
 	CU_ASSERT_FALSE(nvme_completion_is_retry(&cpl));
 
-	cpl.status.sc = SPDK_NVME_SC_INVALID_NUM_SGL_DESCIRPTORS;
+	cpl.status.sc = SPDK_NVME_SC_INVALID_NUM_SGL_DESCRIPTORS;
 	CU_ASSERT_FALSE(nvme_completion_is_retry(&cpl));
 
 	cpl.status.sc = SPDK_NVME_SC_DATA_SGL_LENGTH_INVALID;
