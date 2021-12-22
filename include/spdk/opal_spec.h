@@ -195,7 +195,7 @@ struct spdk_opal_d0_hdr {
 	uint32_t revision;
 	uint32_t reserved_0;
 	uint32_t reserved_1;
-	uint8_t vendor_specfic[32];
+	uint8_t vendor_specific[32];
 };
 SPDK_STATIC_ASSERT(sizeof(struct spdk_opal_d0_hdr) == 48, "Incorrect size");
 
