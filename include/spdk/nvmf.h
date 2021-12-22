@@ -705,7 +705,7 @@ void spdk_nvmf_subsystem_allow_any_listener(
  * \return true if this subsystem allows dynamic management of listen address list,
  *  or false if only allows addresses in the list configured during subsystem setup.
  */
-bool spdk_nvmf_subsytem_any_listener_allowed(
+bool spdk_nvmf_subsystem_any_listener_allowed(
 	struct spdk_nvmf_subsystem *subsystem);
 
 /**

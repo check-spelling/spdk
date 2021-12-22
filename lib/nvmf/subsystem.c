@@ -1231,7 +1231,7 @@ spdk_nvmf_subsystem_allow_any_listener(struct spdk_nvmf_subsystem *subsystem,
 }
 
 bool
-spdk_nvmf_subsytem_any_listener_allowed(struct spdk_nvmf_subsystem *subsystem)
+spdk_nvmf_subsystem_any_listener_allowed(struct spdk_nvmf_subsystem *subsystem)
 {
 	return subsystem->flags.allow_any_listener;
 }
