@@ -4876,7 +4876,7 @@ test_retry_admin_passthru_for_path_error(void)
 	CU_ASSERT(nvme_ctrlr2 != NULL);
 
 	/* Admin passthrough was submitted to ctrlr1, but ctrlr1 was failed.
-	 * Hence the admin passthrough was aborted. But ctrlr2 is avaialble.
+	 * Hence the admin passthrough was aborted. But ctrlr2 is available.
 	 * So after a retry, the admin passthrough is submitted to ctrlr2 and
 	 * should succeed.
 	 */
